@@ -26,9 +26,9 @@ export default function Navbar() {
             <Link
               href={item.href}
               style={{borderRadius:'8px',}}
-              className={`text-xs flex items-center gap-2 py-1 px-2 duration-500 ${
+              className={`text-xs flex items-center gap-2 py-1 px-3 duration-500 ${
                 pathname === item.href
-                  ? "bg-zinc-800 text-white border border-gray-600"
+                  ? "bg-zinc-800 text-white border-gray-600"
                   : "text-zinc-300 hover:bg-zinc-800 hover:text-white hover:border hover:border-gray-600"
               }`}
             >
