@@ -19,7 +19,7 @@ export default function Navbar() {
     <nav className="my-16 animate-fade-in">
       <ul
         className="flex items-center justify-center gap-1 bg-transparent px-1 py-1 rounded-xl border-gray-600"
-        style={{ borderWidth: "1.5px" }}
+        style={{ borderWidth: "1px" }}
       >
         {navigation.map((item) => (
           <li key={item.href} className="flex items-center">
@@ -28,8 +28,8 @@ export default function Navbar() {
               style={{borderRadius:'8px',}}
               className={`text-xs flex items-center gap-2 py-1 px-2 duration-500 ${
                 pathname === item.href
-                  ? "bg-zinc-700 text-white"
-                  : "text-zinc-300 hover:bg-zinc-700 hover:text-white"
+                  ? "bg-zinc-800 text-white border border-gray-600"
+                  : "text-zinc-300 hover:bg-zinc-800 hover:text-white hover:border hover:border-gray-600"
               }`}
             >
               <FontAwesomeIcon icon={item.icon} className="w-3 h-3" />
