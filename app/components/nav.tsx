@@ -2,6 +2,7 @@
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
+import { HomeIcon } from '@heroicons/react/solid';
 
 export const Navigation: React.FC = () => {
 	const ref = useRef<HTMLElement>(null);
@@ -29,10 +30,22 @@ export const Navigation: React.FC = () => {
 				<div className="container flex flex-row-reverse items-center justify-between p-6 mx-auto">
 					<div className="flex justify-between gap-8">
 						<Link
+							href="/"
+							className="duration-200 text-zinc-400 hover:text-zinc-100"
+						>
+							<HomeIcon className="w-6 h-6" />
+						</Link>
+						<Link
 							href="/projects"
 							className="duration-200 text-zinc-400 hover:text-zinc-100"
 						>
 							Projects
+						</Link>
+						<Link
+							href="/about"
+							className="duration-200 text-zinc-400 hover:text-zinc-100"
+						>
+							About
 						</Link>
 						<Link
 							href="/contact"

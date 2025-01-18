@@ -1,8 +1,7 @@
 import "./globals.css";
-import { Inter } from "next/font/google"; // Update to use `next/font`
-import localFont from "next/font/local";  // Update to use `next/font`
+import { Inter } from "next/font/google";
+import localFont from "next/font/local";  
 import { Metadata } from "next";
-// import { Analytics } from "./components/analytics";
 
 export const metadata: Metadata = {
   title: {
@@ -42,17 +41,17 @@ export const metadata: Metadata = {
     card: "summary_large_image",
   },
   icons: {
-    shortcut: "/favicon.png",
+    shortcut: "./favicon.ico",
   },
 };
 
 const inter = Inter({
-  subsets: ["latin"],       // Keep subsets for Google Font
-  variable: "--font-inter", // Define custom CSS variable
+  subsets: ["latin"],      
+  variable: "--font-inter", 
 });
 
 const calSans = localFont({
-  src: "../public/fonts/CalSans-SemiBold.ttf", // Ensure correct path to the local font
+  src: "../public/fonts/CalSans-SemiBold.ttf", 
   variable: "--font-calsans",
 });
 
@@ -64,14 +63,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={[inter.variable, calSans.variable].join(" ")}>
       <head>
-        {/* <Analytics /> */}
+
       </head>
-      <body
-        // className={`bg-black ${
-        //   process.env.NODE_ENV === "development" ? "debug-screens" : undefined
-        // }`}
-        className={'bg-black'}
-      >
+      <body className={'bg-black'}>
         {children}
       </body>
     </html>
